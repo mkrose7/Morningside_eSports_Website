@@ -1,0 +1,37 @@
+body
+    {
+        background-color:whitesmoke;
+        color: black
+    }
+#ital
+{font-style:italic;font-weight: 10;font-size:120%}
+#obl
+{font-style:oblique}
+#srf
+{font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+font-weight: lighter; font-size: x-large;}
+#sans
+{font-family: Verdana, Geneva, Tahoma, sans-serif}
+#mono
+{font-family: cursive; text-align: justify}
+#tdec
+{text-decoration: line-through;font-style: oblique;}
+h1 {
+    text-align:center
+}
+h2 {
+    background-color:#f0f0f0;
+    padding:0px;
+    text-align:center;
+}
+h2 span {
+    display:inline-block;
+    margin:25px
+}
+h3 {
+    position: fixed;
+    bottom: 0;
+    text-align:center;
+    width: 100%;
+    
+}
