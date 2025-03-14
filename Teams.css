@@ -26,7 +26,8 @@ h2 {
 }
 h2 span {
     display:inline-block;
-    margin:25px
+    margin:25px;
+    word-spacing: px;
 }
 h4 {
     position: fixed;
