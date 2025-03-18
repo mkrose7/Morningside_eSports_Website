@@ -1,37 +1,79 @@
-body
-    {
-        background-color:whitesmoke;
-        color: black
-    }
-#ital
-{font-style:italic;font-weight: 10;font-size:120%}
-#obl
-{font-style:oblique}
-#srf
-{font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-font-weight: lighter; font-size: x-large;}
-#sans
-{font-family: Verdana, Geneva, Tahoma, sans-serif}
-#mono
-{font-family: cursive; text-align: justify}
-#tdec
-{text-decoration: line-through;font-style: oblique;}
-h1 {
-    text-align:center
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFFF;
 }
-h2 {
-    background-color:#f0f0f0;
-    padding:0px;
-    text-align:center;
+
+header {
+    background-color: #FFFFFF;
+    padding: .5px;
+    text-align: center;
+    border-bottom: .5px solid #000000;
 }
-h2 span {
-    display:inline-block;
-    margin:25px
+
+header h1 a {
+    font-size: 36px;
+    margin-bottom: 5px;
+    color: #7C2529;
+    font-weight: bold;
+    text-decoration: none;
 }
-h4 {
+
+nav {
+    background-color: #FFFFFF;
+    padding: 5px;
+    text-align: center;
+    border-bottom: 1px solid #000000;
+}
+
+nav a {
+    color: #7C2529;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    font-size: 22px;
+    margin: 10px;
+}
+
+nav span {
+    margin: 20px;
+}
+
+nav span:last-child {
+    margin-right: 45px;
+}
+
+nav a:hover {
+    color: #707372;
+}
+
+.content {
+    background-color: #FFFFFF;
+    padding: 20px;
+}
+
+.social-media {
+    background-color: #FFFFFF;
+    color: #7C2529;
+    padding: 10px;
+    text-align: center;
     position: fixed;
     bottom: 0;
-    text-align:center;
     width: 100%;
-    
+    border-top: 1px solid #000000;
+}
+
+.social-media a {
+    color: #7C2529;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.social-media a:hover {
+    color: #707372;
+}
+
+h1, h2, h4 {
+    color: #7C2529;
 }
