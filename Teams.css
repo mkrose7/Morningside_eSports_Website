@@ -4,56 +4,81 @@ body {
     margin: 0;
     padding: 0;
     background-color: #FFFFFF;
-}
-
-header {
+  }
+  
+  a {
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  a:hover {
+    color: #707372;
+  }
+  
+  /* Header Styles */
+  
+  header {
     background-color: #FFFFFF;
     padding: .5px;
     text-align: center;
     border-bottom: .5px solid #000000;
-}
-
-header h1 a {
+  }
+  
+  header h1 a {
     font-size: 36px;
     margin-bottom: 5px;
     color: #7C2529;
     font-weight: bold;
     text-decoration: none;
-}
-
-nav {
+  }
+  
+  /* Navigation Styles */
+  
+  nav {
     background-color: #FFFFFF;
     padding: 5px;
     text-align: center;
     border-bottom: 1px solid #000000;
-}
-
-nav a {
+  }
+  
+  nav a {
     color: #7C2529;
-    text-decoration: none;
-    transition: color 0.2s ease;
     font-size: 22px;
     margin: 10px;
-}
+  }
 
-nav span {
+  nav span {
     margin: 20px;
-}
+  }
 
-nav span:last-child {
+  nav span:last-child {
     margin-right: 45px;
-}
-
-nav a:hover {
-    color: #707372;
-}
-
-.content {
+  }
+  
+  /* Content Styles */
+  
+  .content {
     background-color: #FFFFFF;
     padding: 20px;
-}
-
-.social-media {
+  }
+  
+  .content h3 {
+    color: #7C2529;
+  }
+  
+  /* Team Styles */
+  
+  .team {
+    margin-bottom: 2em;
+  }
+  
+  .team strong {
+    font-weight: bold;
+  }
+  
+  /* Social Media Styles */
+  
+  .social-media {
     background-color: #FFFFFF;
     color: #7C2529;
     padding: 10px;
@@ -62,18 +87,18 @@ nav a:hover {
     bottom: 0;
     width: 100%;
     border-top: 1px solid #000000;
-}
-
-.social-media a {
+  }
+  
+  .social-media a {
     color: #7C2529;
-    text-decoration: none;
-    transition: color 0.2s ease;
-}
-
-.social-media a:hover {
+  }
+  
+  .social-media a:hover {
     color: #707372;
-}
-
-h1, h2, h4 {
+  }
+  
+  /* Headings Styles */
+  
+  h1, h2, h4 {
     color: #7C2529;
-}
+  }
