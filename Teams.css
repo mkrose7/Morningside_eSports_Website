@@ -3,7 +3,7 @@ body {
     line-height: 1.5;
     margin: 0;
     padding: 0;
-    background-color: #FFFFFF;
+    background-color: #707372;
   }
   
   a {
@@ -35,30 +35,59 @@ body {
   /* Navigation Styles */
   
   nav {
-    background-color: #FFFFFF;
-    padding: 5px;
+    background-color: #7C2529;
+    padding: 8px;
     text-align: center;
     border-bottom: 1px solid #000000;
   }
+
+  nav h2 {
+    margin: 0; /* Remove extra spacing */
+    font-size: 16px; /* Decrease font size */
+}
   
   nav a {
-    color: #7C2529;
-    font-size: 22px;
+    color: #FFFFFF;
+    font-size: 16px;
     margin: 10px;
   }
 
   nav span {
-    margin: 20px;
+    margin: 15px;
   }
 
   nav span:last-child {
-    margin-right: 45px;
+    margin-right: 20px;
   }
   
+  .year {
+    background-color: #FFFFFF; /* Match nav background */
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #000000;
+  }
+
+  .year h3 {
+    margin: 0; /* Remove extra spacing */
+    font-size: 16px; /* Match nav font size */
+    color: #000000; /* Match nav text color */
+  }
+
+  year span {
+    margin: 15px;
+  }
+
   /* Content Styles */
   
+  html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
   .content {
-    background-color: #FFFFFF;
+    flex: 1; /* Makes content take up remaining space */
+    background-color: #707372;
     padding: 20px;
   }
   
@@ -81,21 +110,35 @@ body {
   .social-media {
     background-color: #FFFFFF;
     color: #7C2529;
-    padding: 10px;
-    text-align: center;
+    padding: 5px;
+    text-align: center; /* Ensures text is horizontally centered */
     position: fixed;
     bottom: 0;
     width: 100%;
     border-top: 1px solid #000000;
-  }
-  
-  .social-media a {
+    font-size: 12px; /* Reduce font size */
+    height: 30px; /* Set a fixed height for the footer */
+    display: flex; /* Flexbox for vertical centering */
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Ensure content is centered horizontally */
+}
+
+.social-media a {
     color: #7C2529;
-  }
-  
-  .social-media a:hover {
+    text-decoration: none;
+    transition: color 0.2s ease;
+    font-size: 12px; /* Reduce link font size */
+    padding: 0px; /* Reduce space around links */
+}
+
+.social-media a:hover {
     color: #707372;
-  }
+}
+
+.social-media h4 {
+    margin: 0; /* Remove margin to save space */
+    font-size: 14px; /* Reduce font size */
+}
   
   /* Headings Styles */
   

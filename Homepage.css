@@ -7,7 +7,7 @@ body {
 }
 
 header {
-    background-color: #FFFFFF;
+    background-color: #7C2529;
     padding: .5px;
     text-align: center;
     border-bottom: .5px solid #000000;
@@ -16,62 +16,86 @@ header {
 header h1 a {
     font-size: 36px;
     margin-bottom: 5px;
-    color: #7C2529;
+    color: #FFFFFF;
     font-weight: bold;
     text-decoration: none;
 }
 
 nav {
     background-color: #FFFFFF;
-    padding: 5px;
+    padding: 8px;
     text-align: center;
     border-bottom: 1px solid #000000;
+}
+
+nav h2 {
+    margin: 0; /* Remove extra spacing */
+    font-size: 16px; /* Decrease font size */
 }
 
 nav a {
     color: #7C2529;
     text-decoration: none;
     transition: color 0.2s ease;
-    font-size: 22px;
-    margin: 10px;
+    font-size: 16px;
+    margin: 8px;
 }
 
 nav span {
-    margin: 20px;
+    margin: 15px;
 }
 
 nav span:last-child {
-    margin-right: 45px;
+    margin-right: 20px;
 }
 
 nav a:hover {
     color: #707372;
 }
 
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 .content {
-    background-color: #FFFFFF;
+    flex: 1; /* Makes content take up remaining space */
+    background-color: #707372;
     padding: 20px;
 }
 
 .social-media {
     background-color: #FFFFFF;
     color: #7C2529;
-    padding: 10px;
-    text-align: center;
+    padding: 5px;
+    text-align: center; /* Ensures text is horizontally centered */
     position: fixed;
     bottom: 0;
     width: 100%;
     border-top: 1px solid #000000;
+    font-size: 12px; /* Reduce font size */
+    height: 30px; /* Set a fixed height for the footer */
+    display: flex; /* Flexbox for vertical centering */
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Ensure content is centered horizontally */
 }
 
 .social-media a {
     color: #7C2529;
     text-decoration: none;
     transition: color 0.2s ease;
+    font-size: 12px; /* Reduce link font size */
+    padding: 0px; /* Reduce space around links */
 }
 
 .social-media a:hover {
     color: #707372;
+}
+
+.social-media h4 {
+    margin: 0; /* Remove margin to save space */
+    font-size: 14px; /* Reduce font size */
 }
 
 h1, h2, h4 {
