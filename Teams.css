@@ -61,18 +61,13 @@ p {
 }
 
 .year-select {
-  background: white;
-  border: 2px solid #7C2529;
-  border-radius: 4px;
+  outline:none;
+  background: linear-gradient(to bottom, #7c2529, #5c1a22);
+  border-radius: 0px;
+  border-color:lightgre;
   padding: 0.3rem 0.8rem;
-  color: #7C2529;
-  font-weight:bold;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.year-select:hover {
-  background-color: #7C2529;
   color: white;
+  font-weight:bold;
 }
 
 .content {
