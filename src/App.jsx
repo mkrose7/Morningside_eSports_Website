@@ -1,0 +1,30 @@
+import './App.css'
+
+function App() {
+
+  return (
+    <>
+    <body>
+    <header>
+        <h1><a href="Homepage.html">Morningside eSports</a></h1>
+    </header>
+    <nav>
+        <h2>
+            <span><a href="Teams.html">Teams</a></span>
+            <span><a href="Match History.html">Match History</a></span>
+            <span><a href="Origins.html">Origins</a></span>
+        </h2>
+    </nav>
+    <div class="content">
+        // -- Add content here 
+    </div>
+    <footer class="social-media">
+        <h4>Social Media</h4>
+        // -- Add social media links here - 
+    </footer>
+    </body>
+    </>
+  )
+}
+
+export default App
