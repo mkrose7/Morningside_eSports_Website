@@ -13,7 +13,6 @@ header {
     padding: 1rem 0;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-
 .header-content {
     max-width: 1200px;
     margin: 0 auto;
@@ -21,6 +20,21 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0 2rem;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
 }
 
 h1 a {
@@ -48,31 +62,13 @@ nav a:hover {
     color: #cccccc;
 }
 
-.content {
+.origins-content {
+    padding: 20px;
+    background: #fff;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     flex: 1;
-    padding: 15rem 7rem;
-    background-image: url('Images/homepage.jpg');
-    background-size: cover;
-    background-position: ;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-.text-box {
-    background-color: rgba(242, 242, 242, 0.95);
-    padding: 1rem;
-    border-radius: 10px;
-    max-width: 800px;
-    width: 80%;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    text-align: center;
-    margin-top: 0.9rem;
-}
-
-.text-box h2 {
-    color: #7C2529;
-    margin-bottom: 1rem;
 }
 
 footer {
