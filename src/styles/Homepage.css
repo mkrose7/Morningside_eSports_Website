@@ -1,3 +1,10 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    overflow-x: hidden;
+  }
+  
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
@@ -15,12 +22,20 @@ header {
 }
 
 .header-content {
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem;
+    padding: 0;
+}
+
+.home-wrapper {
+    width: 100vw;
+    min-height: 100vh;
+    padding: 2rem 0;
+    background-color: #f2f2f2;
+    overflow-x: hidden;
 }
 
 h1 a {
@@ -33,6 +48,7 @@ h1 a {
 nav {
     display: flex;
     gap: 2rem;
+    padding: 0;
 }
 
 nav a {
@@ -49,17 +65,23 @@ nav a:hover {
 }
 
 .content {
-    flex: 1;
-    padding: 15rem 7rem;
-    background-image: url('Images/homepage.jpg');
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: url('/Images/homepage.jpg');
     background-size: cover;
-    background-position: ;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: flex-start;
-}
+    overflow-x: hidden;
+  }
+   
+   
 
-.text-box {
+  .text-box {
     background-color: rgba(242, 242, 242, 0.95);
     padding: 1rem;
     border-radius: 10px;
@@ -68,7 +90,8 @@ nav a:hover {
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     text-align: center;
     margin-top: 0.9rem;
-}
+  }
+  
 
 .text-box h2 {
     color: #7C2529;

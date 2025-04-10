@@ -1,3 +1,11 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    overflow-x: hidden;
+  }
+  
+
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
@@ -95,6 +103,15 @@ h1 a {
     justify-content: space-around;
     padding: 20px;
 }
+
+.match-history-wrapper {
+    width: 100vw;
+    min-height: 100vh;
+    padding: 2rem 0;
+    background-color: #f2f2f2;
+    overflow-x: hidden;
+  }
+  
 
 .match-card {
     background: #fff;
