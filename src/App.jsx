@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Homepage from './pages/Homepage';
-import MatchHistory from './pages/MatchHistory';
+import MatchHistory from './pages/Matchhistory';
 import Origins from './pages/Origins';
 import Teams from './pages/Teams';
 import Header from './components/Header';
