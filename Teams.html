@@ -6,6 +6,19 @@
     <link rel="stylesheet" href="Teams.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>Teams</title>
+    <style>
+        .hide {
+            display: none;
+        }
+
+        .hide-2022 {
+            display: none;
+        }
+
+        .hide-2024 {
+            display: none;
+        }
+    </style>
 </head>
 <body>
 <header>
@@ -27,7 +40,7 @@
                         <option value="Year 2024-2025" selected>2024-2025</option>
                         <option value="Year 2023-2024">2023-2024</option>
                         <option value="Year 2022-2023">2022-2023</option>
-                        <option value-="Previous Years">Previous Rosters</option>
+                        <option value="Previous Years">Previous Rosters</option>
                     </select>
                 </div>
             </div>
@@ -42,42 +55,46 @@
             <h3>Head Coach</h3>
             <ul class="player-list">
                 <li class="player-item">
-                    <span>Coach Name</span>
+                    <span>Jared Amundson</span>
                     <span class="player-role">Head Coach</span>
                 </li>
             </ul>
         </div>
     </div>
 
-    <div class="team-section" id="overwatch">
+    <div class="team-section hide" id="overwatch-2024-2025">
         <h2>Overwatch</h2>
         <div class="team-grid">
             <div class="team-card">
                 <h3>Varsity Team</h3>
                 <ul class="player-list">
                     <li class="player-item">
-                        <span>Coach Name</span>
+                        <span>Quentin Charbonneau</span>
                         <span class="player-role">Coach</span>
                     </li>
                     <li class="player-item">
-                        <span>Player Name 1</span>
-                        <span class="player-role">DPS</span>
-                    </li>
-                    <li class="player-item">
-                        <span>Player Name 2</span>
+                        <span>Benjamin Hughes-Dively</span>
                         <span class="player-role">Tank</span>
                     </li>
                     <li class="player-item">
-                        <span>Player Name 3</span>
-                        <span class="player-role">Support</span>
-                    </li>
-                    <li class="player-item">
-                        <span>Player Name 4</span>
+                        <span>Dale Fischer</span>
                         <span class="player-role">DPS</span>
                     </li>
                     <li class="player-item">
-                        <span>Player Name 5</span>
+                        <span>Trenton Eilerts</span>
+                        <span class="player-role">Support / Tank</span>
+                    </li>
+                    <li class="player-item">
+                        <span>Jocelyn Carbajal</span>
                         <span class="player-role">Support</span>
+                    </li>
+                    <li class="player-item">
+                        <span>Anthony Nimaja</span>
+                        <span class="player-role">DPS</span>
+                    </li>
+                    <li class="player-item">
+                        <span>Caleb Pitts</span>
+                        <span class="player-role">DPS</span>
                     </li>
                 </ul>
             </div>
@@ -109,35 +126,39 @@
         </div>
     </div>
 
-    <div class="team-section" id="valorant">
+    <div class="team-section hide" id="valorant-2024-2025">
         <h2>Valorant</h2>
         <div class="team-grid">
             <div class="team-card">
- <h3>Varsity Team</h3>
+                <h3>Varsity Team</h3>
                 <ul class="player-list">
                     <li class="player-item">
-                        <span>Coach Name</span>
+                        <span>Kolyn St. Aubin</span>
                         <span class="player-role">Coach</span>
                     </li>
                     <li class="player-item">
-                        <span>Player Name 1</span>
-                        <span class="player-role">Duelist</span>
-                    </li>
-                    <li class="player-item">
-                        <span>Player Name 2</span>
-                        <span class="player-role">Controller</span>
-                    </li>
-                    <li class="player-item">
-                        <span>Player Name 3</span>
+                        <span>Mackailee Longobricco</span>
                         <span class="player-role">Sentinel</span>
                     </li>
                     <li class="player-item">
-                        <span>Player Name 4</span>
+                        <span>Shane Baratta</span>
+                        <span class="player-role">Controller</span>
+                    </li>
+                    <li class="player-item">
+                        <span>Simon Zychowski</span>
+                        <span class="player-role">Initiator / Sentinel</span>
+                    </li>
+                    <li class="player-item">
+                        <span>RJ Rost</span>
+                        <span class="player-role">Duelist</span>
+                    </li>
+                    <li class="player-item">
+                        <span>Caleb Pitts</span>
                         <span class="player-role">Initiator</span>
                     </li>
                     <li class="player-item">
-                        <span>Player Name 5</span>
-                        <span class="player-role">Flex</span>
+                        <span>Rocky Bushby</span>
+                        <span class="player-role">Duelist</span>
                     </li>
                 </ul>
             </div>
@@ -145,64 +166,94 @@
                 <h3>JV Team</h3>
                 <ul class="player-list">
                     <li class="player-item">
-                        <span>Player Name 1</span>
+                        <span>Lane Poulson</span>
+                        <span class="player-role">Coach</span>
+                    </li>
+                    <li class="player-item">
+                        <span>Rocky Bushby</span>
                         <span class="player-role">Duelist</span>
                     </li>
                     <li class="player-item">
-                        <span>Player Name 2</span>
+                        <span>Dylan Wolff</span>
                         <span class="player-role">Controller</span>
                     </li>
                     <li class="player-item">
-                        <span>Player Name 3</span>
-                        <span class="player-role">Sentinel</span>
+                        <span>Daemon Pendergrass</span>
+                        <span class="player-role">Sentinel / Initiator</span>
                     </li>
                     <li class="player-item">
-                        <span>Player Name 4</span>
+                        <span>Orlando Magana</span>
                         <span class="player-role">Initiator</span>
                     </li>
                     <li class="player-item">
-                        <span>Player Name 5</span>
-                        <span class="player-role">Flex</span>
+                        <span>Tyler Nonnamaker</span>
+                        <span class="player-role">Initiator / Sentinel</span>
                     </li>
                 </ul>
             </div>
         </div>
     </div>
 
-    <div class="team-section" id="rocket-league">
+    <div class="team-section hide" id="rocket-league-2024-2025">
         <h2>Rocket League</h2>
         <div class="team-grid">
             <div class="team-card">
                 <h3>Varsity Team</h3>
                 <ul class="player-list">
                     <li class="player-item">
-                        <span>Coach Name</span>
+                        <span>Jared Amundson</span>
                         <span class="player-role">Coach</span>
                     </li>
                     <li class="player-item">
-                        <span>Player Name 1</span>
-                        <span class="player-role">Striker</span>
+                        <span>Joshua Bern</span>
+                        <span class="player-role"></span>
                     </li>
                     <li class="player-item">
-                        <span>Player Name 2</span>
-                        <span class="player-role">Midfielder</span>
+                        <span>Tyler Duffy</span>
+                        <span class="player-role"></span>
                     </li>
                     <li class="player-item">
-                        <span>Player Name 3</span>
-                        <span class="player-role">Defender</span>
+                        <span>Peirce Taylor</span>
+                        <span class="player-role"></span>
+                    </li>
+                    <li class="player-item">
+                        <span>Owen Romo</span>
+                        <span class="player-role"></span>
                     </li>
                 </ul>
             </div>
         </div>
     </div>
 
-    <div class="team-section" id="past-teams">
-        <h2>Past Teams</h2>
-        <h4>League of Legends</h4>
-        <h5>
-            <!--Team-->
-            <!--Team Member List-->
-        </h5>
+    <div class="team-section hide" id="leauge-of-legends">
+        <h2>League of Legends</h2>
+        <div class="team-grid">
+            <div class="team-card">
+                <h3>Varsity Team</h3>
+                <ul class="player-list">
+                    <li class="player-item">
+                        <span>Coach</span>
+                        <span class="player-role">Coach</span>
+                    </li>
+                    <li class="player-item">
+                        <span>Player</span>
+                        <span class="player-role"></span>
+                    </li>
+                    <li class="player-item">
+                        <span>Player</span>
+                        <span class="player-role"></span>
+                    </li>
+                    <li class="player-item">
+                        <span>Player</span>
+                        <span class="player-role"></span>
+                    </li>
+                    <li class="player-item">
+                        <span>Player</span>
+                        <span class="player-role"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -215,5 +266,67 @@
         <a href="https://www.msidemustangs.com/recruits/esports" target="_blank" rel="noopener noreferrer>">RECRUIT ME</a>
     </div>
 </footer>
+
+<script>
+    // Get the year select element
+    const yearSelect = document.getElementById('year-select');
+
+    // Add event listener to the year select element
+    yearSelect.addEventListener('change', () => {
+        // Get the selected year
+        const selectedYear = yearSelect.value;
+
+        // Toggle the visibility of the team sections
+        if (selectedYear === 'Year 2022-2023') {
+            // Show the League of Legends team section
+            document.getElementById('leauge-of-legends').classList.remove('hide');
+
+            // Hide the Overwatch, Valorant, and Rocket League team sections for 2024-2025 year
+            document.getElementById('overwatch-2024-2025').classList.add('hide');
+            document.getElementById('valorant-2024-2025').classList.add('hide');
+            document.getElementById('rocket-league-2024-2025').classList.add('hide');
+        } else if (selectedYear === 'Year 2024-2025') {
+            // Hide the League of Legends team section
+            document.getElementById('leauge-of-legends').classList.add('hide');
+
+            // Show the Overwatch, Valorant, and Rocket League team sections for 2024-2025 year
+            document.getElementById('overwatch-2024-2025').classList.remove('hide');
+            document.getElementById('valorant-2024-2025').classList.remove('hide');
+            document.getElementById('rocket-league-2024-2025').classList.remove('hide');
+        } else {
+            // Hide the Overwatch, Valorant, and Rocket League team sections for 2024-2025 year
+            document.getElementById('overwatch-2024-2025').classList.add('hide');
+            document.getElementById('valorant-2024-2025').classList.add('hide');
+            document.getElementById('rocket-league-2024-2025').classList.add('hide');
+        }
+    });
+
+    // Get the selected year
+    const selectedYear = document.getElementById('year-select').value;
+
+    // Toggle the visibility of the team sections
+    if (selectedYear === 'Year 2022-2023') {
+        // Show the League of Legends team section
+        document.getElementById('leauge-of-legends').classList.remove('hide');
+
+        // Hide the Overwatch, Valorant, and Rocket League team sections for 2024-2025 year
+        document.getElementById('overwatch-2024-2025').classList.add('hide');
+        document.getElementById('valorant-2024-2025').classList.add('hide');
+        document.getElementById('rocket-league-2024-2025').classList.add('hide');
+    } else if (selectedYear === 'Year 2024-2025') {
+        // Hide the League of Legends team section
+        document.getElementById('leauge-of-legends').classList.add('hide');
+
+        // Show the Overwatch, Valorant, and Rocket League team sections for 2024-2025 year
+        document.getElementById('overwatch-2024-2025').classList.remove('hide');
+        document.getElementById('valorant-2024-2025').classList.remove('hide');
+        document.getElementById('rocket-league-2024-2025').classList.remove('hide');
+    } else {
+        // Hide the Overwatch, Valorant, and Rocket League team sections for 2024-2025 year
+        document.getElementById('overwatch-2024-2025').classList.add('hide');
+        document.getElementById('valorant-2024-2025').classList.add('hide');
+        document.getElementById('rocket-league-2024-2025').classList.add('hide');
+    }
+</script>
 </body>
 </html>
