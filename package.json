@@ -1,0 +1,26 @@
+{
+  "name": "team-red",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "googleapis": "^148.0.0",
+    "react-router-dom": "^7.5.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkrose7/Team-Red.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mkrose7/Team-Red/issues"
+  },
+  "homepage": "https://github.com/mkrose7/Team-Red#readme",
+  "description": ""
+}

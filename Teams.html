@@ -1,338 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Teams.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <title>Teams</title>
-    <style>
-        .hide {
-            display: none;
-        }
-
-        .hide-2022 {
-            display: none;
-        }
-
-        .hide-2024 {
-            display: none;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="Teams.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <title>Teams</title>
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <h1>
-                <a href="Homepage.html">Morningside eSports</a>
-            </h1>
-            <nav class="top-nav">
-                <a href="Teams.html">TEAMS</a>
-                <a href="Match History.html">MATCH HISTORY</a>
-                <a href="Origins.html">ORIGINS</a>
-            </nav>
-        </div>
-        <nav class="bottom-nav">
-            <div class="nav-container">
-                <h2 class="game-nav">
-                    <span><a href="#overwatch">Overwatch</a></span>
-                    <span><a href="#valorant">Valorant</a></span>
-                    <span><a href="#rocket-league">Rocket League</a></span>
-                    <span><a href="#past-teams">Past Teams</a></span>
-                </h2>
-                <div class="year">
-                    <p>Year:
-                    <select id="year-select" class="year-select">
-                        <option value="Year 2024-2025" selected>2024-2025</option>
-                        <option value="Year 2023-2024">2023-2024</option>
-                        <option value="Year 2022-2023">2022-2023</option>
-                        <option value="Previous Years">Previous Rosters</option>
-                    </select>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-<div class="content">
-    <div class="team-section">
-        <h2>Head Coach</h2>
-        <div class="team-card">
-            <h3>Head Coach</h3>
-            <ul class="player-list">
-                <li class="player-item">
-                    <span>Jared Amundson</span>
-                    <span class="player-role">Head Coach</span>
-                </li>
-            </ul>
-        </div>
+  <header>
+    <div class="header-content">
+      <h1><a href="Homepage.html">Morningside eSports</a></h1>
+      <nav class="top-nav">
+        <a href="Teams.html">TEAMS</a>
+        <a href="Match History.html">MATCH HISTORY</a>
+        <a href="Origins.html">ORIGINS</a>
+      </nav>
     </div>
-
-    <div class="team-section hide" id="overwatch-2024-2025">
-        <h2>Overwatch</h2>
-        <div class="team-grid">
-            <div class="team-card">
-                <h3>Varsity Team</h3>
-                <ul class="player-list">
-                    <li class="player-item">
-                        <span>Quentin Charbonneau</span>
-                        <span class="player-role">Coach</span>
-                    </li>
-                    <li class="player-item">
-                        <span>Benjamin Hughes-Dively</span>
-                        <span class="player-role">Tank</span>
-                    </li>
-                    <li class="player-item">
-                        <span>Dale Fischer</span>
-                        <span class="player-role">DPS</span>
-                    </li>
-                    <li class="player-item">
-                        <span>Trenton Eilerts</span>
-                        <span class="player-role">Support / Tank</span>
-                    </li>
-                    <li class="player-item">
-                        <span>Jocelyn Carbajal</span>
-                        <span class="player-role">Support</span>
-                    </li>
-                    <li class="player-item">
-                        <span>Anthony Nimaja</span>
-                        <span class="player-role">DPS</span>
-                    </li>
-                    <li class="player-item">
-                        <span>Caleb Pitts</span>
-                        <span class="player-role">DPS</span>
-                    </li>
-                </ul>
-            </div>
-            <div class="team-card">
-                <h3>JV Team</h3>
-                <ul class="player-list">
-                    <li class="player-item">
-                        <span>Player Name 1</span>
-                        <span class="player-role">DPS</span>
-                    </li>
-                    <li class="player-item">
-                        <span>Player Name 2</span>
-                        <span class="player-role">Tank</span>
-                    </li>
-                    <li class="player-item">
-                        <span>Player Name 3</span>
-                        <span class="player-role">Support</span>
-                    </li>
-                    <li class="player-item">
-                        <span>Player Name 4</span>
-                        <span class="player-role">DPS</span>
-                    </li>
-                    <li class="player-item">
-                        <span>Player Name 5</span>
-                        <span class="player-role">Support</span>
-                    </li>
-                </ul>
-            </div>
+    <nav class="bottom-nav">
+      <div class="nav-container">
+        <h2 class="game-nav">
+          <span><a href="#overwatch">Overwatch</a></span>
+          <span><a href="#valorant">Valorant</a></span>
+          <span><a href="#rocket-league">Rocket League</a></span>
+          <span><a href="#past-teams">Past Teams</a></span>
+        </h2>
+        <div class="year">
+          <p>Year:
+            <select id="year-select" class="year-select">
+              <option value="2024-2025" selected>2024-2025</option>
+              <option value="2023-2024">2023-2024</option>
+              <option value="2022-2023">2022-2023</option>
+              <option value="Previous">Previous Rosters</option>
+            </select>
+          </p>
         </div>
- ```html
-    </div>
+      </div>
+    </nav>
+  </header>
 
-    <div class="team-section hide" id="valorant-2024-2025">
-        <h2>Valorant</h2>
-        <div class="team-grid">
-            <div class="team-card">
-                <h3>Varsity Team</h3>
-                <ul class="player-list">
-                    <li class="player-item">
-                        <span>Kolyn St. Aubin</span>
-                        <span class="player-role">Coach</span>
-                    </li>
-                    <li class="player-item">
-                        <span>Mackailee Longobricco</span>
-                        <span class="player-role">Sentinel</span>
-                    </li>
-                    <li class="player-item">
-                        <span>Shane Baratta</span>
-                        <span class="player-role">Controller</span>
-                    </li>
-                    <li class="player-item">
-                        <span>Simon Zychowski</span>
-                        <span class="player-role">Initiator / Sentinel</span>
-                    </li>
-                    <li class="player-item">
-                        <span>RJ Rost</span>
-                        <span class="player-role">Duelist</span>
-                    </li>
-                    <li class="player-item">
-                        <span>Caleb Pitts</span>
-                        <span class="player-role">Initiator</span>
-                    </li>
-                    <li class="player-item">
-                        <span>Rocky Bushby</span>
-                        <span class="player-role">Duelist</span>
-                    </li>
-                </ul>
-            </div>
-            <div class="team-card">
-                <h3>JV Team</h3>
-                <ul class="player-list">
-                    <li class="player-item">
-                        <span>Lane Poulson</span>
-                        <span class="player-role">Coach</span>
-                    </li>
-                    <li class="player-item">
-                        <span>Rocky Bushby</span>
-                        <span class="player-role">Duelist</span>
-                    </li>
-                    <li class="player-item">
-                        <span>Dylan Wolff</span>
-                        <span class="player-role">Controller</span>
-                    </li>
-                    <li class="player-item">
-                        <span>Daemon Pendergrass</span>
-                        <span class="player-role">Sentinel / Initiator</span>
-                    </li>
-                    <li class="player-item">
-                        <span>Orlando Magana</span>
-                        <span class="player-role">Initiator</span>
-                    </li>
-                    <li class="player-item">
-                        <span>Tyler Nonnamaker</span>
-                        <span class="player-role">Initiator / Sentinel</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
+  <div class="content">
+    <div id="teams-container"></div>
+  </div>
 
-    <div class="team-section hide" id="rocket-league-2024-2025">
-        <h2>Rocket League</h2>
-        <div class="team-grid">
-            <div class="team-card">
-                <h3>Varsity Team</h3>
-                <ul class="player-list">
-                    <li class="player-item">
-                        <span>Jared Amundson</span>
-                        <span class="player-role">Coach</span>
-                    </li>
-                    <li class="player-item">
-                        <span>Joshua Bern</span>
-                        <span class="player-role"></span>
-                    </li>
-                    <li class="player-item">
-                        <span>Tyler Duffy</span>
-                        <span class="player-role"></span>
-                    </li>
-                    <li class="player-item">
-                        <span>Peirce Taylor</span>
-                        <span class="player-role"></span>
-                    </li>
-                    <li class="player-item">
-                        <span>Owen Romo</span>
-                        <span class="player-role"></span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div class="team-section hide" id="leauge-of-legends">
-        <h2>League of Legends</h2>
-        <div class="team-grid">
-            <div class="team-card">
-                <h3>Varsity Team</h3>
-                <ul class="player-list">
-                    <li class="player-item">
-                        <span>Coach</span>
-                        <span class="player-role">Coach</span>
-                    </li>
-                    <li class="player-item">
-                        <span>Player</span>
-                        <span class="player-role"></span>
-                    </li>
-                    <li class="player-item">
-                        <span>Player</span>
-                        <span class="player-role"></span>
-                    </li>
-                    <li class="player-item">
-                        <span>Player</span>
- <span class="player-role"></span>
-                    </li>
-                    <li class="player-item">
-                        <span>Player</span>
-                        <span class="player-role"></span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-
-<footer>
+  <footer>
     <div class="social-media">
-        <a href="https://x.com/msideesports?lang=en" target="_blank" rel="noopener noreferrer">TWITTER</a>
-        <a href="https://www.instagram.com/morningsideesports/" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
-        <a href="https://www.tiktok.com/@msideesports?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer">TIKTOK</a>
-        <a href="https://www.twitch.tv/msideesports" target="_blank" rel="noopener noreferrer">TWITCH</a>
-        <a href="https://www.msidemustangs.com/recruits/esports" target="_blank" rel="noopener noreferrer">RECRUIT ME</a>
+      <a href="https://x.com/msideesports?lang=en" target="_blank">TWITTER</a>
+      <a href="https://www.instagram.com/morningsideesports/" target="_blank">INSTAGRAM</a>
+      <a href="https://www.tiktok.com/@msideesports" target="_blank">TIKTOK</a>
+      <a href="https://www.twitch.tv/msideesports" target="_blank">TWITCH</a>
+      <a href="https://www.msidemustangs.com/recruits/esports" target="_blank">RECRUIT ME</a>
     </div>
-</footer>
+  </footer>
 
-<script>
-    // Get the year select element
-    const yearSelect = document.getElementById('year-select');
+  <script>
+    const SHEET_ID = '1bTm8NIywfWXU03Z7YuSUNAFX0sWvtOgg73Lqwipp4HM';
+    const API_KEY = '5938c4cd54e3923baaf11bbf5280f18d85ac027c';
+    const RANGE = 'Sheet1!A:D'; // Adjust if your sheet has more/less columns
 
-    // Add event listener to the year select element
-    yearSelect.addEventListener('change', () => {
-        // Get the selected year
-        const selectedYear = yearSelect.value;
+    const url = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${RANGE}?key=${API_KEY}`;
 
-        // Toggle the visibility of the team sections
-        if (selectedYear === 'Year 2022-2023') {
-            // Show the League of Legends team section
-            document.getElementById('leauge-of-legends').classList.remove('hide');
+    fetch(url)
+      .then(res => res.json())
+      .then(data => {
+        const [headers, ...rows] = data.values;
+        const people = rows.map(row =>
+          Object.fromEntries(headers.map((key, i) => [key, row[i] || ""]))
+        );
 
-            // Hide the Overwatch, Valorant, and Rocket League team sections for 2024-2025 year
-            document.getElementById('overwatch-2024-2025').classList.add('hide');
-            document.getElementById('valorant-2024-2025').classList.add('hide');
-            document.getElementById('rocket-league-2024-2025').classList.add('hide');
-        } else if (selectedYear === 'Year 2024-2025') {
-            // Hide the League of Legends team section
-            document.getElementById('leauge-of-legends').classList.add('hide');
+        const grouped = {};
 
-            // Show the Overwatch, Valorant, and Rocket League team sections for 2024-2025 year
-            document.getElementById('overwatch-2024-2025').classList.remove('hide');
-            document.getElementById('valorant-2024-2025').classList.remove('hide');
-            document.getElementById('rocket-league-2024-2025').classList.remove('hide');
-        } else {
-            // Hide the Overwatch, Valorant, and Rocket League team sections for 2024-2025 year
-            document.getElementById('overwatch-2024-2025').classList.add('hide');
-            document.getElementById('valorant-2024-2025').classList.add('hide');
-            document.getElementById('rocket-league-2024-2025').classList.add('hide');
+        // Sort everyone into team > level
+        for (const person of people) {
+          const team = person.Team || 'Unknown Team';
+          const level = person.Level?.toUpperCase() === 'V' ? 'Varsity' : 'Junior Varsity';
+          if (!grouped[team]) grouped[team] = { Varsity: [], 'Junior Varsity': [] };
+          grouped[team][level].push(person);
         }
-    });
 
-    // Get the selected year
-    const selectedYear = document.getElementById('year-select').value;
+        const container = document.getElementById('teams-container');
 
-    // Toggle the visibility of the team sections
-    if (selectedYear === 'Year 2022-2023') {
-        // Show the League of Legends team section
-        document.getElementById('leauge-of-legends').classList.remove('hide');
+        for (const [team, levels] of Object.entries(grouped)) {
+          const section = document.createElement('div');
+          section.classList.add('team-section');
 
-        // Hide the Overwatch, Valorant, and Rocket League team sections for 2024-2025 year
-        document.getElementById('overwatch-2024-2025').classList.add('hide');
-        document.getElementById('valorant-2024-2025').classList.add('hide');
-        document.getElementById('rocket-league-2024-2025').classList.add('hide');
-    } else if (selectedYear === 'Year 2024-2025') {
-        // Hide the League of Legends team section
-        document.getElementById('leauge-of-legends').classList.add('hide');
+          const title = document.createElement('h2');
+          title.textContent = team;
+          title.classList.add('team-title');
+          section.appendChild(title);
 
-        // Show the Overwatch, Valorant, and Rocket League team sections for 2024-2025 year
-        document.getElementById('overwatch-2024-2025').classList.remove('hide');
-        document.getElementById('valorant-2024-2025').classList.remove('hide');
-        document.getElementById('rocket-league-2024-2025').classList.remove('hide');
-    } else {
-        // Hide the Overwatch, Valorant, and Rocket League team sections for
-        document.getElementById('overwatch-2024-2025').classList.add('hide');
-        document.getElementById('valorant-2024-2025').classList.add('hide');
-        document.getElementById('rocket-league-2024-2025').classList.add('hide');
-    }
-</script>
+          for (const level of ['Varsity', 'Junior Varsity']) {
+            const members = levels[level];
+            if (members.length === 0) continue;
+
+            const levelTitle = document.createElement('h3');
+            levelTitle.textContent = level;
+            levelTitle.classList.add('level-title');
+            section.appendChild(levelTitle);
+
+            // Sort with Coach first
+            members.sort((a, b) => (a.Position === 'Coach' ? -1 : 1));
+
+            const list = document.createElement('ul');
+            list.classList.add('member-list');
+
+            for (const { Name, Position } of members) {
+              const item = document.createElement('li');
+              item.textContent = `${Name} - ${Position}`;
+              list.appendChild(item);
+            }
+
+            section.appendChild(list);
+          }
+
+          container.appendChild(section);
+        }
+      })
+      .catch(err => {
+        console.error('Error fetching Google Sheet:', err);
+        document.getElementById('teams-container').innerHTML = '<p>Error loading team data.</p>';
+      });
+  </script>
 </body>
 </html>
