@@ -112,3 +112,7 @@ footer {
 .social-media a:hover {
     color: #cccccc;
 }
+
+.h4 {
+    font-size:small;
+}
