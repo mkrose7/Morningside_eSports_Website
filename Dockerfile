@@ -1,27 +1,35 @@
-# Use the official nginx image as the base
-FROM nginx:alpine
+# 1. Base build image
+FROM node:20 AS builder
 
-# Set the working directory to /usr/share/nginx/html
-WORKDIR /usr/share/nginx/html
+# Set working directory
+WORKDIR /app
 
-# Remove the default index.html file
-RUN rm /usr/share/nginx/html/index.html
+# Copy package.json and package-lock.json
+COPY package*.json ./
 
-# Copy the HTML files from the current directory to the working directory
-COPY . /usr/share/nginx/html/
+# Install dependencies
+RUN npm install
 
-# Update the file permissions
-RUN chown -R nginx:nginx /usr/share/nginx/html
-RUN chmod -R 755 /usr/share/nginx/html
+# Copy rest of app
+COPY . .
 
-# Copy the Nginx configuration file
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+# Build the Vite production files
+RUN npm run build
 
-# Check if the HTML files were copied correctly
-RUN ls -l /usr/share/nginx/html/
+# 2. Base production image
+FROM node:20
 
-# Expose port 80 for the web server
-EXPOSE 80
+# Set working directory
+WORKDIR /app
 
-# Define the default command to run when the container starts
-CMD ["nginx", "-g", "daemon off;"]
+# Install serve (simple production server)
+RUN npm install -g serve
+
+# Copy built files from builder
+COPY --from=builder /app/dist /app/dist
+
+# Expose port 3000 (for serve)
+EXPOSE 3000
+
+# Serve built app
+CMD ["serve", "-s", "dist", "-l", "3000"]
