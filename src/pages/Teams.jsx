@@ -38,35 +38,44 @@ export default function Teams() {
   const getAllGames = () => {
     const gameSet = new Set();
     players.forEach(p => {
-      if (p.teamPrimary && (p.teamPriority === "V" || p.teamPriority === "JV")) {
+      if (p.teamPrimary && p.teamPrimary.trim() !== "") {
         gameSet.add(p.teamPrimary.trim());
+      } else {
+        gameSet.add("Unknown Team");
       }
     });
     return Array.from(gameSet);
   };
 
-  const renderPlayers = (team, priority) => {
-    const filteredPlayers = players
-      .filter(p => p.teamPrimary === team && p.teamPriority === priority);
+
+  const renderPlayers = (team) => {
+    const filteredPlayers = players.filter(p => {
+      if (p.teamPrimary) {
+        return p.teamPrimary.trim() === team.trim();
+      } else {
+        // If no teamPrimary exists, show all players
+        return true;
+      }
+    });
+
+    if (filteredPlayers.length === 0) {
+      return <div>No players available.</div>;
+    }
 
     return (
       <div className="players-grid-wrapper">
         <div className="players-grid">
           {filteredPlayers.map((p, i) => (
             <div key={i} className="player-card">
-              <strong>{p.playerIGN} {p.playerTag}</strong>
-              <span>{p.playerFirstName} {p.playerLastName}</span>
-              <span>{p.year}</span>
-              <span>{p.position}</span>
-              {p.rolePrimary && (
-                <span>{p.rolePrimary}{p.roleSecondary ? ` / ${p.roleSecondary}` : ''}</span>
-              )}
+              <strong>{p.playerFirstName} {p.playerLastName}</strong>
+              {p.year && <span>{p.year}</span>}
             </div>
           ))}
         </div>
       </div>
     );
   };
+
 
   const renderSemesterCoaches = () =>
     coaches.map((c, i) => (
@@ -76,12 +85,6 @@ export default function Teams() {
         <span>{c.team}</span>
       </div>
     ));
-
-  const hasVarsity = (team) =>
-    players.some(p => p.teamPrimary === team && p.teamPriority === "V");
-
-  const hasJV = (team) =>
-    players.some(p => p.teamPrimary === team && p.teamPriority === "JV");
 
   const allGames = getAllGames();
 
@@ -119,18 +122,9 @@ export default function Teams() {
         >
           <h2>{game}</h2>
           <div className="teams-grid">
-            {hasVarsity(game) && (
-              <div className="team-card">
-                <h3>Varsity Team</h3>
-                {renderPlayers(game, "V")}
-              </div>
-            )}
-            {hasJV(game) && (
-              <div className="team-card">
-                <h3>JV Team</h3>
-                {renderPlayers(game, "JV")}
-              </div>
-            )}
+            <div className="team-card">
+              {renderPlayers(game)}
+            </div>
           </div>
         </div>
       ))}

@@ -18,29 +18,30 @@ export const getSheetData = async (sheetName) => {
     for (let i = 1; i < data.values.length; i++) {
         const row = data.values[i];
 
-        // Columns A–M = 0 to 12 (players), N–Q = 13 to 16 (coaches)
-        const playerPart = row.slice(0, 13);
-        const coachPart = row.slice(13, 17);
-
-        const playerObj = headers.slice(0, 13).reduce((obj, key, idx) => {
-            obj[key] = playerPart[idx] || "";
+        const rowObj = headers.reduce((obj, key, idx) => {
+            obj[key] = row[idx] || "";
             return obj;
         }, {});
 
-        const coachObj = headers.slice(13, 17).reduce((obj, key, idx) => {
-            obj[key] = coachPart[idx] || "";
-            return obj;
-        }, {});
+        // Normalize field names
+        if (!rowObj.teamPrimary) {
+            if (rowObj.team) rowObj.teamPrimary = rowObj.team;
+            if (rowObj.gamePlayed) rowObj.teamPrimary = rowObj.gamePlayed;
+        }
 
-        const hasPlayerData = Object.values(playerObj).some(v => v);
-        const hasCoachData = Object.values(coachObj).some(v => v);
+        const hasPlayerInfo = rowObj.playerFirstName || rowObj.playerLastName || rowObj.teamPrimary;
+        const hasCoachInfo = rowObj.coachFirstName || rowObj.coachLastName;
 
-        if (hasPlayerData) playerRows.push(playerObj);
-        if (hasCoachData) coachRows.push(coachObj);
+        if (hasPlayerInfo) {
+            playerRows.push(rowObj);
+        }
+        if (hasCoachInfo) {
+            coachRows.push(rowObj);
+        }
     }
 
     return {
         players: playerRows,
-        coaches: coachRows
+        coaches: coachRows,
     };
 };
