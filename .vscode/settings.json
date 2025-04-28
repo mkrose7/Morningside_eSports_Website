@@ -1,3 +1,6 @@
 {
-    "livePreview.defaultPreviewPath": "/Teams.html"
+    "livePreview.defaultPreviewPath": "/Teams.html",
+    "githubPullRequests.ignoredPullRequestBranches": [
+        "mk-brnahc"
+    ]
 }
