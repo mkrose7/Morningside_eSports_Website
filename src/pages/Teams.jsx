@@ -1,3 +1,4 @@
+// src/pages/Teams.jsx
 import { useEffect, useState } from 'react';
 import { getSheetData } from '../api/getSheetData';
 import '../styles/Teams.css';
@@ -7,11 +8,14 @@ const SEMESTERS = [
   "Spring2023", "Fall2022", "Spring2022", "Fall2021", "2017-2021"
 ];
 
+const SECTION_COLORS = [
+  "#f2f2f2", "#e5e5e5", "#ffffff", "#f9f9f9",
+];
+
 export default function Teams() {
   const [players, setPlayers] = useState([]);
   const [selectedSemester, setSelectedSemester] = useState("Spring2025");
   const [coaches, setCoaches] = useState([]);
-
 
   useEffect(() => {
     getSheetData(selectedSemester).then(data => {
@@ -19,7 +23,6 @@ export default function Teams() {
       setCoaches(data.coaches);
     });
   }, [selectedSemester]);
-
 
   const getAllGames = () => {
     const gameSet = new Set();
@@ -31,26 +34,34 @@ export default function Teams() {
     return Array.from(gameSet);
   };
 
-  const renderPlayers = (team, priority) =>
-    players
-      .filter(p => p.teamPrimary === team && p.teamPriority === priority)
-      .map((p, i) => (
-        <li key={i} className="player-item">
-          <span><strong>{p.playerIGN} {p.playerTag}</strong></span>
-          <span>{p.playerFirstName} {p.playerLastName}</span>
-          <span>{p.year}</span>
-          <span>{p.position}</span>
-          <span>{p.rolePrimary}{p.roleSecondary ? ` / ${p.roleSecondary}` : ''}</span>
-        </li>
-      ));
+  const renderPlayers = (team, priority) => {
+    const filteredPlayers = players
+      .filter(p => p.teamPrimary === team && p.teamPriority === priority);
+
+    return (
+      <div className="players-grid">
+        {filteredPlayers.map((p, i) => (
+          <div key={i} className="player-card">
+            <strong>{p.playerIGN} {p.playerTag}</strong>
+            <span>{p.playerFirstName} {p.playerLastName}</span>
+            <span>{p.year}</span>
+            <span>{p.position}</span>
+            {p.rolePrimary && (
+              <span>{p.rolePrimary}{p.roleSecondary ? ` / ${p.roleSecondary}` : ''}</span>
+            )}
+          </div>
+        ))}
+      </div>
+    );
+  };
 
   const renderSemesterCoaches = () =>
     coaches.map((c, i) => (
-      <li key={i} className="player-item">
-        <span><strong>{c.coachFirstName} {c.coachLastName}</strong></span>
-        <span className="player-role">{c.role || "Coach"}</span>
+      <div key={i} className="player-card">
+        <strong>{c.coachFirstName} {c.coachLastName}</strong>
+        <span>{c.role || "Coach"}</span>
         <span>{c.team}</span>
-      </li>
+      </div>
     ));
 
   const hasVarsity = (team) =>
@@ -60,7 +71,7 @@ export default function Teams() {
     players.some(p => p.teamPrimary === team && p.teamPriority === "JV");
 
   return (
-    <div className="content">
+    <div className="teams-wrapper">
       <div className="semester-select">
         <label htmlFor="semester">Select Semester: </label>
         <select
@@ -74,20 +85,24 @@ export default function Teams() {
         </select>
       </div>
 
-      {getAllGames().map(game => (
-        <div className="team-section" key={game} id={game.toLowerCase().replace(/\s/g, '-')}>
+      {getAllGames().map((game, index) => (
+        <div
+          className="team-section"
+          key={game}
+          style={{ backgroundColor: SECTION_COLORS[index % SECTION_COLORS.length] }}
+        >
           <h2>{game}</h2>
-          <div className="team-grid">
+          <div className="teams-grid">
             {hasVarsity(game) && (
               <div className="team-card">
                 <h3>Varsity Team</h3>
-                <ul className="player-list">{renderPlayers(game, "V")}</ul>
+                {renderPlayers(game, "V")}
               </div>
             )}
             {hasJV(game) && (
               <div className="team-card">
                 <h3>JV Team</h3>
-                <ul className="player-list">{renderPlayers(game, "JV")}</ul>
+                {renderPlayers(game, "JV")}
               </div>
             )}
           </div>
@@ -95,10 +110,12 @@ export default function Teams() {
       ))}
 
       {renderSemesterCoaches().length > 0 && (
-        <div className="team-section">
+        <div className="team-section" style={{ backgroundColor: "#f2f2f2" }}>
           <h2>Coaches</h2>
-          <div className="team-card">
-            <ul className="player-list">{renderSemesterCoaches()}</ul>
+          <div className="teams-grid">
+            <div className="team-card">
+              <div className="players-grid">{renderSemesterCoaches()}</div>
+            </div>
           </div>
         </div>
       )}

@@ -3,7 +3,6 @@ import '../styles/Homepage.css';
 import { useEffect } from 'react';
 
 export default function Homepage() {
-
   useEffect(() => {
     const handleScroll = () => {
       const header = document.querySelector('header');
@@ -19,15 +18,13 @@ export default function Homepage() {
   }, []);
 
   return (
-    <div className="background">
-      <header>
-      </header>
+    <div className="home-wrapper">
       <main className="content">
         <div className="text-box fade-in">
           <h2>Welcome to the Morningside eSports Directory</h2>
-          <section className="p">
+          <p>
             Explore our proud history, meet our current teams, and dive into the matches that shaped us.
-          </section>
+          </p>
         </div>
       </main>
     </div>
