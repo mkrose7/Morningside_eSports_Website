@@ -1,12 +1,9 @@
 // src/pages/Teams.jsx
 import { useEffect, useState } from 'react';
 import { getSheetData } from '../api/getSheetData';
-import '../styles/Teams.css';
+import { getSemesters } from '../api/semesters';
 
-const SEMESTERS = [
-  "Spring2025", "Fall2024", "Spring2024", "Fall2023",
-  "Spring2023", "Fall2022", "Spring2022", "Fall2021", "2017-2021"
-];
+import '../styles/Teams.css';
 
 const SECTION_COLORS = [
   "#f2f2f2", "#e5e5e5", "#ffffff", "#f9f9f9",
@@ -14,14 +11,28 @@ const SECTION_COLORS = [
 
 export default function Teams() {
   const [players, setPlayers] = useState([]);
-  const [selectedSemester, setSelectedSemester] = useState("Spring2025");
   const [coaches, setCoaches] = useState([]);
+  const [semesters, setSemesters] = useState([]);
+  const [selectedSemester, setSelectedSemester] = useState('');
 
   useEffect(() => {
-    getSheetData(selectedSemester).then(data => {
-      setPlayers(data.players);
-      setCoaches(data.coaches);
-    });
+    async function fetchSemesters() {
+      const data = await getSemesters();
+      setSemesters(data);
+      setSelectedSemester(data[0]);
+    }
+
+    fetchSemesters();
+  }, []);
+
+  useEffect(() => {
+    if (selectedSemester) {
+      getSheetData(selectedSemester).then(data => {
+        setPlayers(data.players);
+        setCoaches(data.coaches);
+        window.scrollTo(0, 0); // Optional: scroll to top when semester changes
+      });
+    }
   }, [selectedSemester]);
 
   const getAllGames = () => {
@@ -39,18 +50,20 @@ export default function Teams() {
       .filter(p => p.teamPrimary === team && p.teamPriority === priority);
 
     return (
-      <div className="players-grid">
-        {filteredPlayers.map((p, i) => (
-          <div key={i} className="player-card">
-            <strong>{p.playerIGN} {p.playerTag}</strong>
-            <span>{p.playerFirstName} {p.playerLastName}</span>
-            <span>{p.year}</span>
-            <span>{p.position}</span>
-            {p.rolePrimary && (
-              <span>{p.rolePrimary}{p.roleSecondary ? ` / ${p.roleSecondary}` : ''}</span>
-            )}
-          </div>
-        ))}
+      <div className="players-grid-wrapper">
+        <div className="players-grid">
+          {filteredPlayers.map((p, i) => (
+            <div key={i} className="player-card">
+              <strong>{p.playerIGN} {p.playerTag}</strong>
+              <span>{p.playerFirstName} {p.playerLastName}</span>
+              <span>{p.year}</span>
+              <span>{p.position}</span>
+              {p.rolePrimary && (
+                <span>{p.rolePrimary}{p.roleSecondary ? ` / ${p.roleSecondary}` : ''}</span>
+              )}
+            </div>
+          ))}
+        </div>
       </div>
     );
   };
@@ -70,6 +83,8 @@ export default function Teams() {
   const hasJV = (team) =>
     players.some(p => p.teamPrimary === team && p.teamPriority === "JV");
 
+  const allGames = getAllGames();
+
   return (
     <div className="teams-wrapper">
       <div className="semester-select">
@@ -79,16 +94,27 @@ export default function Teams() {
           value={selectedSemester}
           onChange={e => setSelectedSemester(e.target.value)}
         >
-          {SEMESTERS.map(s => (
+          {semesters.map(s => (
             <option key={s} value={s}>{s}</option>
           ))}
         </select>
       </div>
 
-      {getAllGames().map((game, index) => (
+      {/* New Section: Team Links */}
+      <div className="team-links">
+        {allGames.map((game) => (
+          <a key={game} href={`#${game.replace(/\s+/g, '-')}`} className="team-link">
+            {game}
+          </a>
+        ))}
+      </div>
+
+      {/* Teams Section */}
+      {allGames.map((game, index) => (
         <div
           className="team-section"
           key={game}
+          id={game.replace(/\s+/g, '-')}
           style={{ backgroundColor: SECTION_COLORS[index % SECTION_COLORS.length] }}
         >
           <h2>{game}</h2>
@@ -109,12 +135,15 @@ export default function Teams() {
         </div>
       ))}
 
+      {/* Coaches Section */}
       {renderSemesterCoaches().length > 0 && (
         <div className="team-section" style={{ backgroundColor: "#f2f2f2" }}>
           <h2>Coaches</h2>
           <div className="teams-grid">
             <div className="team-card">
-              <div className="players-grid">{renderSemesterCoaches()}</div>
+              <div className="players-grid-wrapper">
+                <div className="players-grid">{renderSemesterCoaches()}</div>
+              </div>
             </div>
           </div>
         </div>

@@ -120,6 +120,34 @@ body {
   color: #333;
 }
 
+.team-links {
+  text-align: center;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.team-link {
+  color: #7C2529;
+  font-weight: bold;
+  text-decoration: none;
+  border: 2px solid #7C2529;
+  border-radius: 5px;
+  padding: 0.4rem 0.8rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.team-link:hover {
+  background-color: #7C2529;
+  color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
   .player-card {
