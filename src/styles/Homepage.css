@@ -1,7 +1,7 @@
 html, body {
     margin: 0;
     padding: 0;
-    width: 100vw;
+    width: 100%;
     overflow-x: hidden;
   }
   
@@ -18,20 +18,20 @@ body {
 header {
     background-color: #7C2529;
     padding: 1rem 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .header-content {
-    max-width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0;
 }
 
 .home-wrapper {
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;
     padding: 2rem 0;
     background-color: #f2f2f2;
@@ -65,7 +65,7 @@ nav a:hover {
 }
 
 .content {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     margin: 0;
     padding: 0;
