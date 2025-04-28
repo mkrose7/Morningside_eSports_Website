@@ -1,160 +1,100 @@
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    overflow-x: hidden;
-  }
-  
-
-body {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background-color: #f2f2f2;
-}
-
-header {
-    background: #7C2529;
-    padding: 1rem 0;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    position: relative;
-}
-
-nav {
-    display: flex;
-    gap: 2rem;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-    transition: color 0.3s ease;
-}
-
-nav a:hover {
-    color: #cccccc;
-}
-
-.header-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 2rem;
-}
-
-h1 a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.5rem;
-    font-weight: 700;
-}
-
-.nav-container {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-}
-
-.game-nav {
-    display: flex;
-    gap: 1.5rem;
-    align-items: center;
-}
-
-.game-nav a {
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-    transition: color 0.3s ease;
-}
-
-.game-nav a:hover {
-    color: #cccccc;
-}
-
-.year-select {
-    background: white;
-    border: 2px solid #7C2529;
-    border-radius: 4px;
-    padding: 0.3rem 0.8rem;
-    color: #7C2529;
-    font-weight: bold;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.year-select:hover {
-    background-color: #7C2529;
-    color: white;
-}
-
-.match-history {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px;
-}
-
 .match-history-wrapper {
     width: 100vw;
     min-height: 100vh;
-    padding: 2rem 0;
     background-color: #f2f2f2;
-    overflow-x: hidden;
-  }
-  
+    padding: 2rem 0;
+}
 
-.match-card {
-    background: #fff;
+.semester-select {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.semester-select select {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: 2px solid #7C2529;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 10px;
-    padding: 20px;
-    width: 300px; /* Adjust width as needed */
+    background: white;
+    color: #7C2529;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-footer {
+.semester-select select:hover {
     background-color: #7C2529;
-    padding: 1rem 0;
-    margin-top: auto;
+    color: white;
 }
 
-.social-media {
+.team-links {
+    text-align: center;
+    margin-bottom: 2rem;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.team-link {
+    color: #7C2529;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid #7C2529;
+    border-radius: 5px;
+    padding: 0.4rem 0.8rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.team-link:hover {
+    background-color: #7C2529;
+    color: white;
+}
+
+.team-section {
+    align-items: center;
+    width: 100%;
+    padding: 3rem 0;
+}
+
+.team-section h2 {
+    text-align: center;
+    color: #7C2529;
+    margin-bottom: 1rem;
+}
+
+.matches-grid {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
+    padding: 0 2rem;
 }
 
-.social-media a {
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    letter-spacing: 1px;
-    transition: color 0.3s ease;
+.match-card {
+    background-color: #ffffff;
+    border: 2px solid #7C2529;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 0 1 240px;
+    max-width: 260px;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
-.social-media a:hover {
-    color: #cccccc;
+.match-card strong {
+    color: #7C2529;
+    font-size: 1.1rem;
 }
 
-@media (max-width: 768px) {
-    .header-content {
-        flex-direction: column;
-        gap: 1rem;
-    }
-    
-    .game-nav {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+.match-card span {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+html {
+    scroll-behavior: smooth;
 }
