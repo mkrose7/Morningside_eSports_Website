@@ -26,6 +26,7 @@ body {
 .semester-select {
   margin-bottom: 2rem;
   text-align: center;
+  color: black;
 }
 
 .semester-select select {
